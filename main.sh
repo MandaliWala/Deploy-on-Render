@@ -4,10 +4,12 @@ then
   exit 1
 else
   echo "Cloning Custom Repo from $UPSTREAM_REPO "
-  git clone $UPSTREAM_REPO /N2Bot
+  git clone $UPSTREAM_REPO
 fi
 
 # Upgrade pip and install requirements
+repo_name=$(basename "$UPSTREAM_REPO")
+echo "$repo_name"
 cd N2Bot
 pip install -U -r requirements.txt
 
