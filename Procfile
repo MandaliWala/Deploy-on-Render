@@ -1,1 +1,1 @@
-web: bash main.sh
+web: gunicorn -b :$PORT app:app & chmod +x pyteledeploy.sh && ./pyteledeploy.sh
