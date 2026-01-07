@@ -1,1 +1,1 @@
-web: gunicorn -b :$PORT app:app && bash main.sh
+bash main.sh
