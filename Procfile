@@ -1,1 +1,1 @@
-bash main.sh
+web: bash main.sh
