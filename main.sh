@@ -1,3 +1,4 @@
+gunicorn -b :$PORT app:app
 if [ -z $UPSTREAM_REPO ]
 then
   echo "Clone karne ke liye UPSTREAM_REPO mai repo url toh do !!!! "
