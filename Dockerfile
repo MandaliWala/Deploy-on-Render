@@ -21,7 +21,6 @@ RUN apt-get install -y \
  && rm -rf /var/lib/apt/lists/*
 
 RUN cd /
-RUN playwright install chromium
 RUN mkdir /N2Bot
 WORKDIR /N2Bot
 COPY . /N2Bot
