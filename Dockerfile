@@ -1,7 +1,6 @@
 FROM python:3.11-slim
 
 RUN apt update && apt upgrade -y
-RUN apt install git -y
 
 # Linux deps for Playwright
 RUN apt-get install -y \
