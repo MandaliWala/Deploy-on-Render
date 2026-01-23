@@ -1,3 +1,6 @@
+apt update && apt upgrade -y
+apt install git -y
+
 if [ -z $UPSTREAM_REPO ]
 then
   echo "Clone karne ke liye UPSTREAM_REPO mai repo url toh do !!!! "
@@ -10,7 +13,7 @@ fi
 # Upgrade pip and install requirements
 repo_name=$(basename "$UPSTREAM_REPO")
 cd $repo_name
-pip install -U -r requirements.txt
+pip install -U pip && pip install -U -r requirements.txt
 
 # Start bot
 echo "Starting Bot....✨"
