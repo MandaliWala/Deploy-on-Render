@@ -1,4 +1,3 @@
-apt update && apt upgrade -y
 apt install git -y
 
 if [ -z $UPSTREAM_REPO ]
