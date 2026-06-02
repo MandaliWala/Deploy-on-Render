@@ -21,5 +21,5 @@ then
   python3 bot.py
 else
   echo "running $START_CMD "
-  eval "$START_CMD"
+  sh -c "$START_CMD"
 fi
