@@ -15,11 +15,11 @@ pip install -U pip && pip install -U -r requirements.txt
 # Start bot
 echo "Starting Bot....✨"
 
-if [ -z "$START_CMD" ]
+if [ -z $START_CMD ]
 then
   echo "koi START_CMD nahin diya hai isiliye python3 bot.py run ho raha hai"
   python3 bot.py
 else
   echo "running $START_CMD "
-  sh -c "$START_CMD"
+  $START_CMD
 fi
