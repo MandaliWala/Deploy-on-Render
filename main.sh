@@ -2,15 +2,13 @@ if [ -z "$UPSTREAM_REPO" ]
 then
   echo "Clone karne ke liye UPSTREAM_REPO mai repo url toh do !!!! "
   exit 1
+elif [ -n "$UPSTREAM_BRANCH" ]
+then
+  echo "Cloning Custom Repo from $UPSTREAM_REPO (branch: $UPSTREAM_BRANCH)"
+  git clone -b "$UPSTREAM_BRANCH" "$UPSTREAM_REPO"
 else
   echo "Cloning Custom Repo from $UPSTREAM_REPO "
-  if [ -n "$UPSTREAM_BRANCH" ]
-  then
-    echo "Branch: $UPSTREAM_BRANCH"
-    git clone -b "$UPSTREAM_BRANCH" "$UPSTREAM_REPO"
-  else
-    git clone "$UPSTREAM_REPO"
-  fi
+  git clone "$UPSTREAM_REPO"
 fi
 
 # Upgrade pip and install requirements
