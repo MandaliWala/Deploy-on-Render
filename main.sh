@@ -4,7 +4,8 @@ then
   exit 1
 elif [ -n "$UPSTREAM_BRANCH" ]
 then
-  echo "Cloning Custom Repo from $UPSTREAM_REPO (branch: $UPSTREAM_BRANCH)"
+  echo "Cloning Custom Repo from $UPSTREAM_REPO"
+  echo "Custom Branch: $UPSTREAM_BRANCH"
   git clone -b "$UPSTREAM_BRANCH" "$UPSTREAM_REPO"
 else
   echo "Cloning Custom Repo from $UPSTREAM_REPO "
